@@ -1,0 +1,71 @@
+.console {
+  background-color: #000000;
+  color: #ff0000;
+  font-family: monospace;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 400px;
+  margin: auto;
+  margin-top: 25px;
+  white-space: pre-wrap;
+  font-size: 18px; /* Tamanho do texto */
+  line-height: 2; /* Espaçamento entre linhas, ajuste conforme necessário */
+  margin-left: 10px;
+  opacity: 0; /* Começa invisível */
+  transition: opacity 0.5s ease-in-out; /* Transição suave de opacidade */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Altura total da tela */
+  background-color: #000; /* Cor de fundo */
+  position: relative; /* Para posicionar o console */
+  overflow: hidden; /* Para ocultar elementos durante a transição */
+}
+
+button {
+  display: flex;
+  background-color: #ff0000;
+  font-size: 16px;
+  height: 50px;
+  width: 130px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 2px solid #ff0000;
+  transition: transform 0.1s ease, background-color 0.2s ease; /* Suaviza a transição */
+}
+
+button:hover {
+  transform: scale(1.1); /* Aumenta o tamanho em 5% ao passar o mouse */
+}
+
+button:active {
+  transform: scale(0.90); /* Reduz levemente o tamanho ao pressionar */
+}
+
+
+button p{
+  font-weight: bolder;
+}
+
+.cursor {
+  display: inline-block;
+  width: 10px; /* Largura do cursor */
+  height: 20px; /* Altura do cursor */
+  background-color: #ff0000;
+  animation: blink 1s steps(1) infinite;
+  vertical-align: top; /* Alinha o cursor ao topo do texto */
+  margin-left: 2px; /* Espaço entre o texto e o cursor */
+  margin-top: 5px;
+}
+
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
